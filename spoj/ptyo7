@@ -1,0 +1,11 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define mmax 20010
+#define nmax 10010
+
+int graph[max][2],graph[nmax];
+
+int find(int set1)
+{
+	
+}
