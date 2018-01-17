@@ -20,32 +20,22 @@
 
 using namespace std;
 
-#define ll long long int
+
 
 int main()
 {
 	int n;
 	cin>>n;
-	vector<int> p(n),degree(n),child(n);
-	for(int i=1;i<n;i++)
+	while(n--)
 	{
-		cin>>p[i];
-		--p[i];
-		degree[p[i]]++;
-	}
-	for(int i=0;i<n;i++)
-	{
-		if(degree[i] == 0)
-			child[p[i]]++;
-	}
-	for(int i=0;i<n;i++)
-	{
-		if( degree[i]!=0 && child[i] < 3)
-		{
-			cout<<"No";
-			return 0;
-		}
-	}
-	cout<<"Yes";
-	return 0;
+	int a[4];
+	for(int i=0;i<4;i++)
+		cin>>a[i];
+	sort(a,a+4);
+	if(a[0]==a[1]&&a[2]==a[3])
+		cout<<"YES"<<'\n';
+	else
+		cout<<"NO"<<'\n';
+            }
+return 0;
 }
