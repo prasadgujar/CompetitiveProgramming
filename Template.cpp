@@ -80,6 +80,7 @@ const double PI = acos(-1.0);
 #define all(a) a.begin(),a.end()
 #define lb lower_bound
 #define ub upper_bound
+#define sc(x) scanf("%d",&x);
 #define fastio ios::sync_with_stdio(false);cin.tie(nullptr);cout.tie(nullptr);cerr.tie(nullptr)
 #define assert(x) {if(!(x)){cerr<<"Assertion failed at line "<<__LINE__<<": "<<#x<<" = "<<(x)<<"\n";exit(1);}}
 #define inchar getchar//_unlocked
@@ -104,6 +105,42 @@ inline void instr(char *str){ register char c =  0; register int i = 0; while(c 
 template<typename T> void pv(T a, T b) { for (T i = a; i != b; ++i) cout << *i << " "; cout << endl; }
 template<typename T> void chmin(T& a, T b) { if (a > b) a = b; }
 template<typename T> void chmax(T& a, T b) { if (a < b) a = b; }
+inline string IntToString(LL a){
+  char x[100];
+  sprintf(x,"%lld",a); string s = x;
+  return s;
+}
+
+inline LL StringToInt(string a){
+  char x[100]; LL res;
+  strcpy(x,a.c_str()); sscanf(x,"%lld",&res);
+  return res;
+}
+
+inline string GetString(void){
+  char x[1000005];
+  scanf("%s",x); string s = x;
+  return s;
+}
+
+inline string uppercase(string s){
+  int n = SIZE(s); 
+  REP(i,n) if (s[i] >= 'a' && s[i] <= 'z') s[i] = s[i] - 'a' + 'A';
+  return s;
+}
+
+inline string lowercase(string s){
+  int n = SIZE(s); 
+  REP(i,n) if (s[i] >= 'A' && s[i] <= 'Z') s[i] = s[i] - 'A' + 'a';
+  return s;
+}
+
+inline void OPEN (string s) {
+  #ifndef TESTING
+  freopen ((s + ".in").c_str (), "r", stdin);
+  freopen ((s + ".out").c_str (), "w", stdout);
+  #endif
+}
 template <class T> using Tree = tree<T, null_type, less<T>, rb_tree_tag,tree_order_statistics_node_update>;
 int main()
 {

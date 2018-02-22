@@ -25,7 +25,8 @@ int main()
      	int n;
      	n = rand()%mod + 1;
      	printf("%d\n",  n);
+     	
      }
 
     return 0; 
-}
+} 
