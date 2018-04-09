@@ -1,0 +1,52 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+    string s;
+    cin>>s;
+    int n = s.length();
+    int cn = 0;
+    for(int i=0;i<n;i++)
+    {
+        if(s[i]=='B')
+        {
+            if(s[i+1]=='W'&&i!=n-1)
+            {
+                cn++;
+                s[i+1]='#';
+            }
+              if(s[i+2]=='W'&&i!=n-2)
+            {
+                cn++;
+                s[i+2]='#';
+            }
+        }
+         if(s[i]=='B')
+        {
+            if(s[i-1]=='W'&&i!=0)
+            {
+                cn++;
+                s[i-1]='#';
+            }
+             if(s[i-2]=='W'&&i!=0)
+            {
+                cn++;
+                s[i-2]='#';
+            }
+            
+        }
+    }
+
+     cout<<cn<<'\n';
+}
+int main() {
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        solve();
+    }
+	
+	return 0;
+}

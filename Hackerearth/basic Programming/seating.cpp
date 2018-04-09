@@ -25,6 +25,7 @@ void solve()
     {
         cout<<"n+7"<<" "<<"AS"<<'\n';
     }
+    else if()
 }
 int main() {
     int t;

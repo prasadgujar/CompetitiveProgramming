@@ -8,7 +8,7 @@ void solve()
     int total = 0;
     for (int i = 1; i <= n; i++)
     {
-        if (!(i % 3 )&& !(i % 5 ))
+        if (!(i % 3 )&&a !(i % 5 ))
         {
             total += i;
         }
